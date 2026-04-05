@@ -1,0 +1,8 @@
+include LICENSE
+include README.md
+include config.json
+include config.example.json
+include litellm_config.yaml
+include ai.litellm.proxy.plist
+include setup.sh
+

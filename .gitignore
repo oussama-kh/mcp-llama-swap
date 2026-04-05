@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+*.egg
+dist/
+build/
+.venv/
+.eggs/
+*.whl
+.mypy_cache/
+*.cast
+PUBLISHING.md

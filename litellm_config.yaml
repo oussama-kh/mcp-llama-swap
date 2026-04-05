@@ -1,0 +1,20 @@
+# LiteLLM proxy configuration
+# Translates Anthropic Messages API requests from Claude Code
+# into OpenAI-compatible requests for llama-server
+
+model_list:
+  - model_name: "local"
+    litellm_params:
+      model: "openai/local"
+      api_base: "http://localhost:8000/v1"
+      api_key: "sk-none"
+
+  - model_name: "*"
+    litellm_params:
+      model: "openai/*"
+      api_base: "http://localhost:8000/v1"
+      api_key: "sk-none"
+
+litellm_settings:
+  drop_params: true
+  request_timeout: 300

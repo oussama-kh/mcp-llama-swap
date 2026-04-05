@@ -1,0 +1,10 @@
+{
+  "plists_dir": "~/.llama-plists",
+  "health_url": "http://localhost:8000/health",
+  "health_timeout": 30,
+  "models": {
+    "planner": "qwen35-35b-a3b-thinking.plist",
+    "coder": "qwen3-coder.plist",
+    "fast": "glm-4-7-flash.plist"
+  }
+}
