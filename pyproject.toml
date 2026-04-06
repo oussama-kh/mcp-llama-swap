@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "mcp-llama-swap"
 version = "1.0.0"
-description = "MCP server for hot-swapping llama.cpp models in Claude Code sessions on macOS"
+description = "MCP server for hot-swapping llama.cpp models in Claude Code sessions"
 readme = "README.md"
 license = {text = "Apache-2.0"}
 requires-python = ">=3.10"
@@ -18,6 +18,7 @@ keywords = [
     "claude-code",
     "model-context-protocol",
     "launchctl",
+    "systemd",
     "apple-silicon",
     "local-llm",
     "model-switching",
@@ -25,6 +26,7 @@ keywords = [
 classifiers = [
     "Development Status :: 4 - Beta",
     "Environment :: MacOS X",
+    "Operating System :: POSIX :: Linux",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: Apache Software License",
     "Programming Language :: Python :: 3",
@@ -40,6 +42,12 @@ dependencies = [
     "httpx>=0.27.0",
 ]
 
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
 [project.urls]
 Homepage = "https://github.com/oussama-kh/mcp-llama-swap"
 Repository = "https://github.com/oussama-kh/mcp-llama-swap"
@@ -49,4 +57,7 @@ Issues = "https://github.com/oussama-kh/mcp-llama-swap/issues"
 mcp-llama-swap = "mcp_llama_swap:main"
 
 [tool.setuptools]
-py-modules = ["mcp_llama_swap"]
+packages = ["mcp_llama_swap"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"

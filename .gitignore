@@ -6,8 +6,22 @@ __pycache__/
 dist/
 build/
 .venv/
+.test-venv/
 .eggs/
 *.whl
 .mypy_cache/
+.pytest_cache/
 *.cast
+
+# Local/personal files
+config.json
+ai.litellm.proxy.plist
+plans/
 PUBLISHING.md
+
+# IDE and tool configs
+.claude/
+.idea/
+.vscode/
+*.swp
+*.swo

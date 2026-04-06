@@ -1,6 +1,0 @@
-{
-  "plists_dir": "~/.llama-plists",
-  "health_url": "http://localhost:8000/health",
-  "health_timeout": 30,
-  "models": {}
-}

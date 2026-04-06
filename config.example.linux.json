@@ -1,0 +1,9 @@
+{
+  "services_dir": "~/.llama-services",
+  "health_url": "http://localhost:8000/health",
+  "health_timeout": 30,
+  "models": {
+    "planner": "llama-server-planner.service",
+    "coder": "llama-server-coder.service"
+  }
+}
